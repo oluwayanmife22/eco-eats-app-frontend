@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         element: <SingleProducts />,
         loader: async ({ params }) => {
           try {
-            const response = await fetch(`http://localhost:5000/api/items/${params.id}`);
+            const response = await fetch(`https://eco-eats-app-backend.vercel.app/api/items/${params.id}`);
             if (!response.ok) {
               throw new Error('Item not found');
             }

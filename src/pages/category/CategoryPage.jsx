@@ -21,7 +21,7 @@ const CategoryPage = () => {
       try {
         setLoading(true);
         setError(null); // clear previous errors
-        const response = await axios.get(`http://localhost:5000/api/categories/${category}`);
+        const response = await axios.get(`https://eco-eats-app-backend.vercel.app/api/categories/${category}`);
         setItems(response.data);
       } catch (error) {
         setError(error.response?.data?.message || 'Error loading category');
